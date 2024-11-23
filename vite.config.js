@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: 'harper-zh.github.io',
+  base: '/harper-zh.github.io/',
   css: {
     postcss: './postcss.config.js', // 确保引入正确的配置
   },
