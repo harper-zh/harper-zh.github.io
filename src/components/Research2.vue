@@ -6,7 +6,7 @@
 
 <template>
     <div class="flex flex-col gap-12">
-        <img src="/images/research2.png" alt="">
+        
 
         <div class="flex flex-col gap-4">
             <div>
@@ -28,7 +28,7 @@
                 <p>Collaboration: Duan Chengbi.<br />Photo Credits: Photo 1, 2, 5 and 6 by Duan Chengbi.</p>
             </div>
         </div>
-
+        <img src="/images/research2.png" alt="">
     </div>
 </template>
 

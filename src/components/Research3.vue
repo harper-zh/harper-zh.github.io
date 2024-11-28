@@ -6,12 +6,7 @@
 
 <template >
     <div>
-        <img src="/images/re31.jpg" alt="">
-        <img src="/images/re32.jpg" alt="">
-        <img src="/images/re33.jpg" alt="">
-        <img src="/images/re34.jpg" alt="">
-
-        <div class="flex flex-col gap-4 mt-12">
+        <div class="flex flex-col gap-4 mb-12">
             <div>
                 <span class="font-bold">Research Focus</span>
                 <p>
@@ -31,6 +26,10 @@ located by the river.
                 <p>Collaboration: Xie Han.</p>
             </div>
         </div>
+        <img src="/images/re31.jpg" alt="">
+        <img src="/images/re32.jpg" alt="">
+        <img src="/images/re33.jpg" alt="">
+        <img src="/images/re34.jpg" alt="">
     </div>
 </template>
 

@@ -5,7 +5,7 @@
 
 <template>
     <div class="flex flex-col gap-12">
-        <img src="/images/research1.png" alt="">
+        
 
         <div class="flex flex-col gap-4">
             <span>(Ongoing research, master thesis)</span>
@@ -26,7 +26,7 @@
                     to model light redistribution.</p>
             </div>
         </div>
-
+        <img src="/images/research1.png" alt="">
     </div>
 </template>
 

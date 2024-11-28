@@ -28,7 +28,7 @@ const selectedIndex = ref(0); // 默认选择第一个研究
 <template>
   <div class="flex flex-row mt-20 ">
     <!-- 左侧研究列表 -->
-    <div class="size-1/4 flex flex-col pr-36">
+    <div class="size-1/12 flex flex-col">
       <div 
         v-for="(item, index) in contents" 
         :key="index" 
@@ -36,18 +36,18 @@ const selectedIndex = ref(0); // 默认选择第一个研究
         @click="selectedIndex = index"
       >
       <span 
-          class=" text-center font-bold text-lg" 
+          class="font-bold " 
           :class="selectedIndex === index ? 'text-black' : 'text-gray-300'"
         >
           {{ item.title }}
         </span>
-        <img :src="item.src" class="rounded-lg w-full h-auto">
+        <!-- <img :src="item.src" class="rounded-lg w-full h-auto"> -->
         
       </div>
     </div>
 
     <!-- 右侧研究内容 -->
-    <div class="size-3/4 border-l border-gray-300 pl-6">
+    <div class=" border-l border-gray-300 pl-6 ml-12">
       <component :is="contents[selectedIndex].component" />
     </div>
   </div>
