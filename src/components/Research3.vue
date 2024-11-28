@@ -5,8 +5,13 @@
 
 
 <template >
-    <div>
-        <div class="flex flex-col gap-4 mb-12">
+    <div class="flex flex-col gap-12">
+        <div class="flex flex-col gap-8">
+        <div>
+            <p class="font-bold">Design and Fabrication of The Interactive BaiMaofang Sculpture</p>
+            </div>
+        <div class="flex flex-col gap-2 ">
+            
             <div>
                 <span class="font-bold">Research Focus</span>
                 <p>
@@ -26,10 +31,13 @@ located by the river.
                 <p>Collaboration: Xie Han.</p>
             </div>
         </div>
+    </div>
+        <div>
         <img src="/images/re31.jpg" alt="">
         <img src="/images/re32.jpg" alt="">
         <img src="/images/re33.jpg" alt="">
         <img src="/images/re34.jpg" alt="">
+    </div>
     </div>
 </template>
 

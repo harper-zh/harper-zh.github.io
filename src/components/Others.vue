@@ -23,10 +23,10 @@ const contents = [
 const selectedIndex = ref(0); // 默认选择第一个
 </script>
 <template>
-  <div class="flex flex-row mt-20 ">
+  <div class="flex flex-row mt-auto ">
     <!-- 左侧研究列表 -->
     <div class="size-1/12 flex flex-col ">
-        <p >I am also deeply passionate about and explored other creative and technology fields. Here, you will find a showcase of my work in front-end development and comics.</p>
+        
         
         <div 
         v-for="(item, index) in contents" 
@@ -35,7 +35,7 @@ const selectedIndex = ref(0); // 默认选择第一个
         @click="selectedIndex = index"
       >
       <span 
-          class="font-bold " 
+          class="font-bold text-justify" 
           :class="selectedIndex === index ? 'text-black' : 'text-gray-300'"
         >
           {{ item.title }}

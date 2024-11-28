@@ -7,17 +7,17 @@ import Research3 from './Research3.vue';
 
 const contents = [
   {
-    title: 'Light Redistribution in 3D-Printed Thermoplastic Geometries',
+    title: '3D-Printed Thermoplastic',
     src: '/images/re1.png',
     component: Research1,
   },
   {
-    title: 'Large-Scale 3D Printing for Urban Furniture at Historical Sites',
+    title: '3D-Printed Urban Furniture',
     src: '/images/re2.png',
     component: Research2,
   },
   {
-    title: 'Design and Fabrication of The Interactive BaiMaofang Sculpture',
+    title: 'Concrete Digital Fabrication',
     src: '/images/re3.png',
     component: Research3,
   },
@@ -26,7 +26,7 @@ const contents = [
 const selectedIndex = ref(0); // 默认选择第一个研究
 </script>
 <template>
-  <div class="flex flex-row mt-20 ">
+  <div class="flex flex-row mt-auto ">
     <!-- 左侧研究列表 -->
     <div class="size-1/12 flex flex-col">
       <div 
@@ -36,7 +36,7 @@ const selectedIndex = ref(0); // 默认选择第一个研究
         @click="selectedIndex = index"
       >
       <span 
-          class="font-bold " 
+          class="font-bold text-justify" 
           :class="selectedIndex === index ? 'text-black' : 'text-gray-300'"
         >
           {{ item.title }}

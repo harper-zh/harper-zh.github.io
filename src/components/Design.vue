@@ -1,5 +1,5 @@
 <template>
-    <div class="card my-10">
+    <div class="card">
         <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :showItemNavigatorsOnHover="true" :showItemNavigators="true" >
             <template #item="slotProps"> 
                 <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="height: 100%; display: block" />

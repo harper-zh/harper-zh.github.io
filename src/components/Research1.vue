@@ -7,8 +7,12 @@
     <div class="flex flex-col gap-12">
         
 
-        <div class="flex flex-col gap-4">
-            <span>(Ongoing research, master thesis)</span>
+        <div class="flex flex-col gap-8">
+            <div>
+                <p class="font-bold ">Light Redistribution in 3D-Printed Thermoplastic Geometries: Automatic Experiment and Machine Learning</p>
+                <span>(Ongoing research, master thesis)</span>
+            </div>
+            <div class="flex flex-col gap-2">
             <div>
                 <span class="font-bold">Research Focus</span>
                 <p>To establish an automated optical experimental pipeline for massive data
@@ -25,6 +29,7 @@
                     algorithms
                     to model light redistribution.</p>
             </div>
+        </div>
         </div>
         <img src="/images/research1.png" alt="">
     </div>

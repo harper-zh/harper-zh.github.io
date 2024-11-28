@@ -32,26 +32,27 @@ const cardContents = ref([
 <template>
     
 
-        <div class="card flex flex-row  justify-between mt-36">
+        <div class="card flex flex-row  justify-between mt-auto">
             <img src="/images/avatar.jpg" alt="Image" class="size-1/3" />
-            <div class="flex flex-col  justify-end item-end gap-10">
+            <div class="flex flex-col  justify-end item-end gap-10 ml-72">
                 <h1 class="text-4xl font-bold text-black text-right"> Zhang Yuan </h1>
-                <div class=" flex flex-col justify-between  gap-10 text-right relative ">
-                    <p class="pl-72"> I am currently a graduate student at
-                        the 
+                <div class=" flex flex-col justify-between  gap-10 text-justify ">
+                    <p > I am currently a graduate student at the 
                         <a href="https://archialgo.com/" class="underline">
                             
                                 Institute of Architectural Algorithms and Applications, 
                             
                         </a>
-                        Southeast University, China, where I also earned my Bachelor of Architecture (B.Arch).
+                        Southeast University, China, an institution with a 40-year relationship with ETH Zurich. I also earned my B.Arch from Southeast University.
                         <br />
-                        My research interests include robotic fabrication, robotic control, and human-robot collaboration.
-Beyond academics, I have a passion for creativity 💡 and a love for dogs 🐶.
+                        
+                        My research focuses on  digital fabrication, robotic control, and human-robot collaboration.
+                        <br />
+                        
+I am also passionate about exploring creative and technological fields, including software development and comics.
                     </p>
 
-                    <div class="h-px w-1/12 border-dashed border border-slate-700 flex absolute right-0 bottom-1/4">
-                    </div>
+                    
                     <div class="flex flex-row gap-10 justify-end">
                         <div class="flex flex-row ">
                             <p class="font-bold">Contact:
@@ -73,17 +74,9 @@ Beyond academics, I have a passion for creativity 💡 and a love for dogs 🐶.
                     </div>
 
                 </div>
-                <!-- <div class="flex flex-row justify-between gap-10">
-
-<div class="shadow-none cursor-pointer hover:bg-slate-100 flex flex-col gap-2" v-for="item in cardContents" @click="item.command">
-    <div class="font-bold text-xl">{{ item.title }}</div>
-    <div class="text-[18px]">{{ item.content }}</div>
-
-</div>
-
-</div> -->
+                
             </div>
-
+            
             
         </div>
 

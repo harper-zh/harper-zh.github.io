@@ -8,7 +8,12 @@
     <div class="flex flex-col gap-12">
         
 
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-8">
+            <div>
+                <p class="font-bold">Large-Scale 3D Printing for Urban Furniture at Historical Sites</p>
+                </div>
+            <div class="flex flex-col gap-2">
+            
             <div>
                 <span class="font-bold">Project Overview</span>
                 <p>
@@ -27,6 +32,7 @@
                 
                 <p>Collaboration: Duan Chengbi.<br />Photo Credits: Photo 1, 2, 5 and 6 by Duan Chengbi.</p>
             </div>
+        </div>
         </div>
         <img src="/images/research2.png" alt="">
     </div>

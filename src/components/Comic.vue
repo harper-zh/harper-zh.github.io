@@ -74,11 +74,11 @@
                 emojis, which I share on my personal platform. My emoji stickers has gained significant popularity, with
                 over 100,000 downloads and more than 5 million shares.</p>
         </div>
-
+        <img src="/images/comic4.png" alt="">
         <img src="/images/comic1.png" alt="">
         <img src="/images/comic2.png" alt="">
         <img src="/images/comic3.png" alt="">
-        <img src="/images/comic4.png" alt="">
+        
 
     </div>
 </template>
