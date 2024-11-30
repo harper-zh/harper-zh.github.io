@@ -64,7 +64,7 @@ I am also passionate about exploring creative and technological fields, includin
 
                         </div>
                         <div class="flex flex-row">
-                            <p class="font-bold">My Sketch Work:
+                            <p class="font-bold">My Artwork Account:
                                 <a
                                     href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note">
                                     <i class="pi pi-instagram" style="font-size: 1rem"> </i>

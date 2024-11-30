@@ -32,8 +32,8 @@ const responsiveOptions = ref([
 
 
     <div class="flex flex-col gap-20">
-        <div class="flex flex-col gap-6">
-            <p class="font-bold">Research Center for Digital Humanities of PKU (Front-end Development Intern)
+        <div class="flex flex-col gap-4">
+            <p class="font-bold text-lg">Research Center for Digital Humanities of PKU (Front-end Development Intern)
             </p>
             <div class="flex flex-col gap-2">
 
@@ -55,9 +55,9 @@ const responsiveOptions = ref([
 
         </div>
 
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
 
-            <p class="font-bold">Front-end Development for recruitment website
+            <p class="font-bold text-lg">Front-end Development for recruitment website
             </p>
             <div class="flex flex-col gap-2">
                 <div>
@@ -86,7 +86,7 @@ const responsiveOptions = ref([
             <div class="flex flex-col gap-2">
 
 
-                <p class="font-bold">VR House Viewing App Prototype
+                <p class="font-bold text-lg">VR House Viewing App Prototype
                 </p>
                 <span>Prototyped an interactive VR Home Tour System for a real estate app.
                     The UI interaction encompasses

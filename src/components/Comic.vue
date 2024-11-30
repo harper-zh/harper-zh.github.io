@@ -68,13 +68,22 @@
 </Accordion> -->
 <template>
     <div class="flex flex-col gap-4">
-
+        <div class="flex flex-row">
+                            <p class="font-bold">My Artwork Account:
+                                <a
+                                    href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note">
+                                    <i class="pi pi-instagram" style="font-size: 1rem"> </i>
+                                </a>
+                            </p>
+                        </div>
         <div>
             <p>Drawing inspiration from my life and perception, I have developed a collection of sketches, comics, and
-                emojis, which I share on my personal platform. My emoji stickers has gained significant popularity, with
-                over 100,000 downloads and more than 5 million shares.</p>
+                emojis, which I share on my personal platform.<br /> My emoji stickers, which can be used on Wechat,  has gained significant popularity, with
+                over 9,000 downloads and more than 400 thousands shares.</p>
         </div>
+        <img src="/images/sticker.jpg" alt="">
         <img src="/images/comic4.png" alt="">
+        <img src="/images/profile.jpg" alt="">
         <img src="/images/comic1.png" alt="">
         <img src="/images/comic2.png" alt="">
         <img src="/images/comic3.png" alt="">
