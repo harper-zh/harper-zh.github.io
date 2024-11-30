@@ -4,6 +4,7 @@
 import { ref } from 'vue';
 import Dev from './Dev.vue';
 import Comic from './Comic.vue';
+import  Divider  from 'primevue/divider';
 
 
 const contents = [
@@ -31,7 +32,7 @@ const selectedIndex = ref(0); // 默认选择第一个
         <div 
         v-for="(item, index) in contents" 
         :key="index" 
-        class="flex flex-col cursor-pointer  mb-8"
+        class="flex flex-col cursor-pointer"
         @click="selectedIndex = index"
       >
       <span 
@@ -40,6 +41,7 @@ const selectedIndex = ref(0); // 默认选择第一个
         >
           {{ item.title }}
         </span>
+        <Divider />
     
         
       </div>

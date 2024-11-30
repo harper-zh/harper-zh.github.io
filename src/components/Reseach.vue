@@ -1,6 +1,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Divider from 'primevue/divider';
 import Research1 from './Research1.vue';
 import Research2 from './Research2.vue';
 import Research3 from './Research3.vue';
@@ -32,7 +33,7 @@ const selectedIndex = ref(0); // 默认选择第一个研究
       <div 
         v-for="(item, index) in contents" 
         :key="index" 
-        class="flex flex-col cursor-pointer items-center mb-8"
+        class="flex flex-col cursor-pointer items-center"
         @click="selectedIndex = index"
       >
       <span 
@@ -41,6 +42,7 @@ const selectedIndex = ref(0); // 默认选择第一个研究
         >
           {{ item.title }}
         </span>
+        <Divider />
         <!-- <img :src="item.src" class="rounded-lg w-full h-auto"> -->
         
       </div>
