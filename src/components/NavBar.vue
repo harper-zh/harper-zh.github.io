@@ -78,6 +78,7 @@ const handleMobileClick = (item) => {
   gap: 20px;
   transition: all 0.3s ease-in-out;
   justify-content: space-between;
+  align-items: start;
   width:100%;
 
 }

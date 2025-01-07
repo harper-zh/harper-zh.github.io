@@ -17,7 +17,7 @@ export const PhotoService = {
                 itemImageSrc: '/images/pav.png',
                 thumbnailImageSrc: '/images/pavs.png',
                 concept: 'Concept: An easy-to-build pavilion that incorporates weaving craftsmanship',
-                title: 'Computationla Design and Fabrication',
+                title: 'Computational Design and Fabrication',
                 year: 'Year: 2022',
                 teacher: 'Instructor: Prof. Li Biao',
                 collaboration: 'Collaboration: Kong Xingqi'

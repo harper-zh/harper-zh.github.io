@@ -20,11 +20,15 @@
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  gap: 20px;
-  max-width: 1920px;
-  min-width: 1080px;
+  gap: 25px;
+
   background-color: rgb(255, 255, 255);
   font-family: Verdana;
+  justify-content: center;
+
+  
+
+
 
 
 }

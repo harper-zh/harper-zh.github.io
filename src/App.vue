@@ -7,9 +7,9 @@ import NavBar from './components/NavBar.vue';
 
 
 <div id="app" >
-  <NavBar class="mb-12"></NavBar>
+  <NavBar ></NavBar>
     
-  <RouterView />
+  <RouterView class="content"></RouterView>
 </div>
 </template>
 
@@ -23,5 +23,13 @@ import NavBar from './components/NavBar.vue';
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
+  #app {
+    max-width: 1920px;
+    min-width: 1080px;
+  }
+}
+.content {
+  
+  flex-grow: 1;
 }
 </style>

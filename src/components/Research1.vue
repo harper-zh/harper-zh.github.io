@@ -21,11 +21,10 @@
                 <div>
                     <span class="font-bold">Research Focus</span>
                     <p>
-                        -Developing a design-to-fabrication workflow for 3D-printed facades.<br />
-                        -Exploring
+                        -To explore
                         automated experimrntal and data-driven approaches to investigate the light behavior of
                         3D-printed facades.<br />
-                        -Create a
+                        -To create a
                         “3D-printed geometry vs light distribution” function from data points using machine learning
                         algorithms.</p>
                 </div>
@@ -42,6 +41,7 @@
                 </div>
             </div>
         </div>
+        <img src="/images/focus.jpg" alt="">
         <img src="/images/research1.png" alt="">
     </div>
 </template>
