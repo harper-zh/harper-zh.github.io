@@ -31,6 +31,7 @@ const cardContents = ref([
 </script>
 <template>
 
+    <div class="aboutme-root">
     <div class="row-view">
         <div class="flex flex-row justify-center items-end h-[50vh]">
 
@@ -49,8 +50,8 @@ const cardContents = ref([
                         B.Arch from Southeast University.
                         <br />
                         I'm passionate about exploring the intersection of design and technology.
-                        My research focuses on digital fabrication and human-robot collaboration.
-                        Beyond architecture, I have experience in front-end development and a keen in UX design. Drawing
+                        My research focuses on robotic fabrication, computational tools & systems development.
+                        Beyond architecture, drawing
                         comics and skteches is my creative outlet.
                         I'm eager to continue exploring interdisciplinary fields and bridging the gap between creativity
                         and technology.
@@ -62,7 +63,7 @@ const cardContents = ref([
                     <div class="flex flex-row gap-10 justify-end">
                         <div class="flex flex-row ">
                             <p class="font-bold">Contact:
-                                <a href="mailto:zhang_yuan@seu.edu.cn">
+                                <a href="mailto:31415926hatper@gmail.com">
                                     <i class="pi pi-envelope" style="font-size: 1rem"> </i>
                                 </a>
                             </p>
@@ -110,7 +111,7 @@ const cardContents = ref([
                         B.Arch from Southeast University.
                         <br />
                         I'm passionate about exploring the intersection of design and technology.
-                        My research focuses on digital fabrication and human-robot collaboration.
+                        My research focuses on robotic fabrication, computational tools & systems development.
                         Beyond architecture, I have experience in front-end development and a keen in UX design. Drawing
                         comics and skteches is my creative outlet.
                         I'm eager to continue exploring interdisciplinary fields and bridging the gap between creativity
@@ -146,18 +147,13 @@ const cardContents = ref([
 
 
     </div>
-
-
-
-
-
-
-
+    </div>
 </template>
 <style scoped>
 @media (max-width: 1080px) {
     .row-view {
         display: none;
+        
     }
 
     .column-view {

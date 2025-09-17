@@ -8,7 +8,7 @@ import Research3 from './Research3.vue';
 
 const contents = [
   {
-    title: '3D-Printed Thermoplastic',
+    title: 'Light Redistribution in 3D-Printed Thermoplastic',
     src: '/images/re1.png',
     component: Research1,
   },

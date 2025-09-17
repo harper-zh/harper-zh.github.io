@@ -78,15 +78,15 @@
                         </div>
         <div>
             <p>Drawing inspiration from my life and perception, I have developed a collection of sketches, comics, and
-                emojis, which I share on my personal platform.<br /> My emoji stickers, which can be used on Wechat,  has gained significant popularity, with
-                over 9,000 downloads and more than 400 thousands shares.</p>
+                emojis.<br /> My emoji stickers, which can be used on Wechat,  has gained significant popularity, with
+                over 14,000 downloads and more than 758,000 shares.</p>
         </div>
-        <img src="/images/sticker.jpg" alt="">
+        <!-- <img src="/images/sticker.png" alt=""> -->
         <img src="/images/comic4.png" alt="">
         <img src="/images/profile.jpg" alt="">
-        <img src="/images/comic1.png" alt="">
+        <!-- <img src="/images/comic1.png" alt="">
         <img src="/images/comic2.png" alt="">
-        <img src="/images/comic3.png" alt="">
+        <img src="/images/comic3.png" alt=""> -->
         
 
     </div>

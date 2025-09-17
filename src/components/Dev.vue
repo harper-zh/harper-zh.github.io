@@ -80,7 +80,7 @@ const responsiveOptions = ref([
             </div>
         </div>
 
-        <div class="flex flex-col gap-4">
+        <!-- <div class="flex flex-col gap-4">
 
 
             <div class="flex flex-col gap-2">
@@ -108,7 +108,7 @@ const responsiveOptions = ref([
 
 
             </div>
-        </div>
+        </div> -->
     </div>
 
 </template>
