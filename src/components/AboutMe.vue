@@ -49,7 +49,7 @@ const cardContents = ref([
                         Southeast University, China, a lab with a 40-year relationship with ETH Zurich. I also earned my
                         B.Arch from Southeast University.
                         <br />
-                        I'm passionate about exploring the intersection of design and technology.
+                        
                         My research focuses on robotic fabrication, computational tools & systems development.
                         Beyond architecture, drawing
                         comics and skteches is my creative outlet.
