@@ -10,11 +10,11 @@
 
         <div class="flex flex-col gap-8">
             <div>
-                <p class="font-bold  text-lg">Large-Scale 3D Printing for Urban Furniture at Historical Sites</p>
+                <p class="font-bold  text-lg">DINGSHU URBAN FURNITURE: Scalable Robotic 3D Printing for Public Space</p>
                 </div>
             <div class="flex flex-col gap-4">
                 <div>
-                <span class="font-bold">Instructor</span>
+                <span class="font-bold">Supervisor</span>
                 <p>Prof. Hua Hao</p>
             </div>
             <div>

@@ -63,7 +63,7 @@ const cardContents = ref([
                     <div class="flex flex-row gap-10 justify-end">
                         <div class="flex flex-row ">
                             <p class="font-bold">Contact:
-                                <a href="mailto:31415926hatper@gmail.com">
+                                <a href="mailto:31415926harper@gmail.com">
                                     <i class="pi pi-envelope" style="font-size: 1rem"> </i>
                                 </a>
                             </p>
@@ -73,7 +73,7 @@ const cardContents = ref([
                         <div class="flex flex-row">
                             <p class="font-bold">My Artwork Account:
                                 <a
-                                    href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note">
+                                    href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note" target="_blank">
                                     <i class="pi pi-instagram" style="font-size: 1rem"> </i>
                                 </a>
                             </p>
@@ -123,7 +123,7 @@ const cardContents = ref([
                 <div class="flex flex-col gap-4 ">
                     <div class="flex flex-row ">
                         <p class="font-bold">Contact:
-                            <a href="mailto:zhang_yuan@seu.edu.cn">
+                            <a href="mailto:31415926harper@gmail">
                                 <i class="pi pi-envelope" style="font-size: 1rem"> </i>
                             </a>
                         </p>
@@ -133,7 +133,7 @@ const cardContents = ref([
                     <div class="flex flex-row">
                         <p class="font-bold">My Artwork Account:
                             <a
-                                href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note">
+                                href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note" target="_blank">
                                 <i class="pi pi-instagram" style="font-size: 1rem"> </i>
                             </a>
                         </p>

@@ -8,11 +8,11 @@
     <div class="flex flex-col gap-12">
         <div class="flex flex-col gap-8">
         <div>
-            <p class="font-bold text-lg">Design and Fabrication of The Interactive BaiMaofang Sculpture</p>
+            <p class="font-bold text-lg">BAIMAOFANG: Interactive Concrete Sculpture</p>
             </div>
         <div class="flex flex-col gap-4 ">
             <div>
-                <span class="font-bold">Instructor</span>
+                <span class="font-bold">Supervisor</span>
                 <p>Prof. Li Li</p>
             </div>
             <div>

@@ -71,7 +71,7 @@
         <div class="flex flex-row">
                             <p class="font-bold">My Artwork Account:
                                 <a
-                                    href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note">
+                                    href="https://www.xiaohongshu.com/user/profile/5fe15f78000000000101c1a9?xsec_token=&xsec_source=pc_note" target="_blank">
                                     <i class="pi pi-instagram" style="font-size: 1rem"> </i>
                                 </a>
                             </p>

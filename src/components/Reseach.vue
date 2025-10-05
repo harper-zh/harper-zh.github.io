@@ -5,20 +5,26 @@ import Divider from 'primevue/divider';
 import Research1 from './Research1.vue';
 import Research2 from './Research2.vue';
 import Research3 from './Research3.vue';
+import Research0 from './Research0.vue';
 
-const contents = [
-  {
-    title: 'Light Redistribution in 3D-Printed Thermoplastic',
+const contents = [{
+    title: 'LIGHT REDISTRIBUTION IN 3DPTFS',
     src: '/images/re1.png',
     component: Research1,
   },
   {
-    title: '3D-Printed Urban Furniture',
+    title: 'TIMBER-EARTH-SLAB',
+    src: '/images/re0.png',
+    component: Research0,
+  },
+  
+  {
+    title: '3D-PRINTED URBAN FURNITURE',
     src: '/images/re2.png',
     component: Research2,
   },
   {
-    title: 'Concrete Digital Fabrication',
+    title: 'CONCRETE DIGITAL FABRICATION',
     src: '/images/re3.png',
     component: Research3,
   },

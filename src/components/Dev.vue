@@ -32,18 +32,22 @@ const responsiveOptions = ref([
 
 
     <div class="flex flex-col gap-20">
-        <div class="flex flex-col gap-4">
-            <p class="font-bold text-lg">Research Center for Digital Humanities of PKU (Front-end Development Intern)
+        <div class="flex flex-col gap-8">
+            <div><p class="font-bold text-lg">Research Center for Digital Humanities of PKU 
             </p>
+            
+            <span>(Front-end Development Intern)</span></div>
+            
             <div class="flex flex-col gap-2">
 
 
                 <div>
-                    
-                    <span>Collaborated on the development of an AI poetry website and an
-                        AI-driven epitaph
-                        information extraction website using
-                        Vue.js, focusing on front-end design and functionality. </span>
+                    <span class="font-bold">Contributions: </span>
+                    <p>-Collaborated with a team via GitHub to develop an AI-powered epitaph information extraction platform
+using Vue.js and TailwindCSS. Implemented four core features: Submitting forms to AI APIs. Dynamic
+rendering with streaming responses. Displaying locally stored information. Responsive UI design.<br />
+-Developed a poetry generation interface by integrating AI models through API calls with real-time result
+display. Built a local history system with Pinia, improving user creativity and learning experience. </p>
                 </div>
                 <span>
                     <span class="font-bold">Website Link: </span>Waiting for online
