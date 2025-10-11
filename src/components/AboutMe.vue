@@ -8,26 +8,26 @@ import Card from 'primevue/card';
 const router = useRouter();
 import Divider from 'primevue/divider';
 import { ref } from 'vue';
-const cardContents = ref([
-    {
-        title: '-Researches and Projects',
-        // content:'My research focuses on robotic fabrication and robotic control in architectural design and construction, with an interest in exploring more with human-robot collaboration.',
-        command: () => router.push('/research')
+// const cardContents = ref([
+//     {
+//         title: '-Researches and Projects',
+//         // content:'My research focuses on robotic fabrication and robotic control in architectural design and construction, with an interest in exploring more with human-robot collaboration.',
+//         command: () => router.push('/research')
 
 
-    },
-    {
-        title: '-Design Works',
-        // content:'My research focuses on robotic fabrication and robotic control in architectural design and construction, with an interest in exploring more with human-robot collaboration',
-        command: () => router.push('/design')
+//     },
+//     {
+//         title: '-Design Works',
+//         // content:'My research focuses on robotic fabrication and robotic control in architectural design and construction, with an interest in exploring more with human-robot collaboration',
+//         command: () => router.push('/design')
 
-    },
-    {
-        title: '-Development and Comics',
-        // content:'My research focuses on robotic fabrication and robotic control in architectural design and construction, with an interest in exploring more with human-robot collaboration',
-        command: () => router.push('/others')
-    }
-])
+//     },
+//     {
+//         title: '-Development and Comics',
+//         // content:'My research focuses on robotic fabrication and robotic control in architectural design and construction, with an interest in exploring more with human-robot collaboration',
+//         command: () => router.push('/others')
+//     }
+// ])
 </script>
 <template>
 
@@ -111,7 +111,7 @@ const cardContents = ref([
                         B.Arch from Southeast University.
                         <br />
                         My research focuses on robotic fabrication, computational tools & systems development.
-                        Beyond architecture, I have experience in front-end development and a keen in UX design. Drawing
+                        Beyond architecture, drawing
                         comics and skteches is my creative outlet.
                         I'm eager to continue exploring interdisciplinary fields and bridging the gap between creativity
                         and technology.

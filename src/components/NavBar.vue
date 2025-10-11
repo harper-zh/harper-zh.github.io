@@ -131,7 +131,9 @@ const handleMobileClick = (item) => {
   }
 
   .navbar-links.menu-open {
-    display: flex; /* 打开菜单时显示导航栏 */
+    display: flex; 
+    background-color: rgb(255, 255, 255);
+    /* 打开菜单时显示导航栏 */
   }
 
   .navbar-item {
