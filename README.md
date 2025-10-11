@@ -1,6 +1,6 @@
 # personalPage
 
-This template should help get you started developing with Vue 3 in Vite.
+Personal website of Yuan Zhang. Developed by Vue.js.
 
 ## Recommended IDE Setup
 
