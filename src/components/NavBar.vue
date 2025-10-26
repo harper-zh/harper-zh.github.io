@@ -6,7 +6,7 @@ import { useRoute, useRouter } from 'vue-router';
 
 const items = ref([
   { label: 'About Me', path: '/', command: () => router.push('/') },
-  { label: 'Researches & Projects', path: '/research', command: () => router.push('/research') },
+  { label: 'Research & Projects', path: '/research', command: () => router.push('/research') },
   { label: 'Design', path: '/design', command: () => router.push('/design') },
   { label: 'Development & Comics', path: '/others', command: () => router.push('/others') },
 ]);
@@ -59,8 +59,17 @@ const handleMobileClick = (item) => {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0px;
-
+  margin-left: 2rem;
+  margin-right: 2rem;
   position: relative;
+}
+
+/* 大屏幕时增加侧边距 */
+@media (min-width: 1024px) {
+  .navbar {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
 }
 
 /* 菜单按钮 */

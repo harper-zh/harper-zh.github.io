@@ -35,7 +35,7 @@ const selectedIndex = ref(0); // 默认选择第一个研究
 <template>
   <div class="flex flex-row mt-auto ">
     <!-- 左侧研究列表 -->
-    <div class="size-1/12 flex flex-col">
+    <div class="size-1/8 flex flex-col">
       <div 
         v-for="(item, index) in contents" 
         :key="index" 

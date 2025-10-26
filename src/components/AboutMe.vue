@@ -4,10 +4,9 @@ import 'primeicons/primeicons.css'
 
 import { useRoute, useRouter } from 'vue-router';
 
-import Card from 'primevue/card';
+
 const router = useRouter();
-import Divider from 'primevue/divider';
-import { ref } from 'vue';
+
 // const cardContents = ref([
 //     {
 //         title: '-Researches and Projects',
@@ -62,10 +61,11 @@ import { ref } from 'vue';
 
                     <div class="flex flex-row gap-10 justify-end">
                         <div class="flex flex-row ">
-                            <p class="font-bold">Contact:
+                            <p class="font-bold flex flex-row gap-2">Contact:
                                 <a href="mailto:31415926harper@gmail.com">
                                     <i class="pi pi-envelope" style="font-size: 1rem"> </i>
                                 </a>
+                                <a href="https://www.linkedin.com/in/yuan-zhang-769104306" target="_blank"><i class="pi pi-linkedin" style="font-size: 1rem"></i></a>
                             </p>
 
 
@@ -122,10 +122,11 @@ import { ref } from 'vue';
 
                 <div class="flex flex-col gap-4 ">
                     <div class="flex flex-row ">
-                        <p class="font-bold">Contact:
+                        <p class="font-bold flex flex-row gap-2">Contact:
                             <a href="mailto:31415926harper@gmail">
                                 <i class="pi pi-envelope" style="font-size: 1rem"> </i>
                             </a>
+                            <a href="https://www.linkedin.com/in/yuan-zhang-769104306" target="_blank"><i class="pi pi-linkedin" style="font-size: 1rem"></i></a>
                         </p>
 
 

@@ -10,13 +10,13 @@ const isHome = computed(() => route.name === 'about' || route.path === '/')
 <template>
 
 
-<!-- <div id="app" > -->
+<div id="app" >
   <NavBar ></NavBar>
     
   <div :class="['content', { 'home-layout': isHome }]">
     <RouterView></RouterView>
   </div>
-<!-- </div> -->
+</div>
 </template>
 
 <style scoped>
@@ -29,15 +29,16 @@ const isHome = computed(() => route.name === 'about' || route.path === '/')
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
+  .content {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
   /* #app {
     max-width: 1920px;
     min-width: 1080px;
   } */
 }
-.content {
-  
-  flex-grow: 1;
-}
+
 /* Adjust AboutMe position only on home route */
 .home-layout :deep(.aboutme-root),
 .home-layout :deep(.about-me-root) {
