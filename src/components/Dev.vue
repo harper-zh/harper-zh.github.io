@@ -52,7 +52,7 @@ display. Built a local history system with Pinia, improving user creativity and 
                 <span>
                     <span class="font-bold">Website Link: </span>Waiting for online
                 </span>
-                <img src="/public/images/epitaph.jpg" alt="Image">
+                <img src="/images/epitaph.jpg" alt="Image">
 
             </div>
 
@@ -77,7 +77,7 @@ display. Built a local history system with Pinia, improving user creativity and 
                     <p class="font-bold">Webiste Link: </p> <a href="https://www.seuarchjob.com/manage/"
                         class="underline">Digital
                         Employment Platform for Southeast University School of Architecture</a>
-                    <img src="/public/images/jobweb.jpg" alt="Image">
+                    <img src="/images/jobweb.jpg" alt="Image">
                 </div>
 
 

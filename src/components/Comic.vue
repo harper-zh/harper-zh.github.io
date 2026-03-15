@@ -10,14 +10,14 @@
                 <span class="font-bold">Webiste Link:</span> <a href="https://www.seuarchjob.com/manage/"
                     class="underline">Digital
                     Employment Platform for Southeast University School of Architecture</a>
-                <img src="/public/images/jobweb.jpg" alt="Image">
+                <img src="/images/jobweb.jpg" alt="Image">
 
                 <span class="my-5">• Collaborated on the development of an AI poetry website and an
                     AI-driven epitaph
                     information extraction website using
                     Vue.js, focusing on front-end design and functionality. </span><br />
                 <span class="font-bold">Webiste Link: Waiting for online</span> <br />
-                <img src="/public/images/epitaph.jpg" alt="Image" >
+                <img src="/images/epitaph.jpg" alt="Image" >
 
                 <span class="my-5">• Prototyped an interactive VR Home Tour System for a real estate app.
                     The UI interaction encompasses
