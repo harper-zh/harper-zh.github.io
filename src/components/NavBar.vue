@@ -1,153 +1,144 @@
-
-
 <script setup>
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 const items = ref([
-  { label: 'About Me', path: '/', command: () => router.push('/') },
-  { label: 'Research & Projects', path: '/research', command: () => router.push('/research') },
-  { label: 'Design', path: '/design', command: () => router.push('/design') },
-  { label: 'Development & Comics', path: '/others', command: () => router.push('/others') },
+  { label: 'About Me', path: '/' },
+  { label: 'Research', path: '/research' },
+  { label: 'Digital Tools', path: '/dev' },
+{ label: 'CV', path: null, url: '/cv.pdf' }
 ]);
 
 const route = useRoute();
 const router = useRouter();
 const menuOpen = ref(false);
 
-const isActive = (item) => route.path === item.path;
-
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value;
-};
-
-const handleMobileClick = (item) => {
-  router.push(item.path);
-  menuOpen.value = false; // Close menu after selection
-};
+const isActive = (item) => item.path === '/' ? route.path === '/' : route.path.startsWith(item.path)
+const toggleMenu = () => { menuOpen.value = !menuOpen.value; };
+const navigate = (item) => {
+  if (item.url) {
+    window.open(item.url, '_blank')
+  } else {
+    router.push(item.path)
+    menuOpen.value = false
+  }
+}
 </script>
 
 <template>
   <nav class="navbar">
-    <!-- 菜单按钮 (在小屏幕显示) -->
-    <button class="menu-button" @click="toggleMenu">
-      ☰
-    </button>
+    <!-- 左侧：名字 -->
+    <span class="site-title" @click="router.push('/')">Yuan Zhang</span>
 
-    <!-- 标签导航 -->
-    <div
-      class="navbar-links"
-      :class="{ 'menu-open': menuOpen }"
-    >
+    <!-- 汉堡按钮（小屏） -->
+    <button class="menu-button" @click="toggleMenu">☰</button>
+
+    <!-- 右侧：导航链接 -->
+    <div class="navbar-links" :class="{ 'menu-open': menuOpen }">
       <div
         v-for="item in items"
         :key="item.label"
         :class="['navbar-item', { active: isActive(item) }]"
-        @click="handleMobileClick(item)"
+        @click="navigate(item)"
       >
         {{ item.label }}
-        <span class="underline"></span>
+        <span class="underline-bar"></span>
       </div>
     </div>
   </nav>
 </template>
 
 <style scoped>
-/* Navbar 基本样式 */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  padding: 12px 0;
+  width: 80vw;
+  margin: 0 auto;
   position: relative;
 }
 
-/* 大屏幕时增加侧边距 */
-@media (min-width: 1024px) {
-  .navbar {
-    margin-left: 8rem;
-    margin-right: 8rem;
-  }
+.site-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-/* 菜单按钮 */
+.site-title:hover {
+  opacity: 0.7;
+}
+
 .menu-button {
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* 默认隐藏 */
+  display: none;
 }
 
-/* 标签导航样式 */
 .navbar-links {
   display: flex;
-  gap: 20px;
-  transition: all 0.3s ease-in-out;
-  justify-content: space-between;
-  align-items: start;
-  width:100%;
-
+  gap: 40px;
+  align-items: center;
 }
 
 .navbar-item {
   position: relative;
-  padding: 10px;
-  
+  padding: 8px 10px;
   cursor: pointer;
   color: #333;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .navbar-item.active {
-  font-weight: bold;
+  font-weight: 700;
   color: #000;
 }
 
-.navbar-item .underline {
+.underline-bar {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
   background-color: #000;
-  transition: width 0.3s ease-in-out;
+  width: 0;
+  transition: width 0.3s ease;
 }
 
-.navbar-item.active .underline {
-  width: 100%;
+.navbar-item.active .underline-bar {
+  width: calc(100% - 20px);
 }
 
-/* 响应式设计 */
 @media (max-width: 768px) {
   .menu-button {
-    display: block; /* 小屏幕显示菜单按钮 */
+    display: block;
   }
 
   .navbar-links {
-    display: none; /* 默认隐藏导航栏 */
+    display: none;
     flex-direction: column;
-    
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    background-color: #fff;
+    padding: 8px 0;
+    z-index: 100;
     
-    padding: 10px 0;
-
   }
 
   .navbar-links.menu-open {
-    display: flex; 
-    background-color: rgb(255, 255, 255);
-    /* 打开菜单时显示导航栏 */
+    display: flex;
   }
 
   .navbar-item {
     padding: 10px 20px;
-    font-size: 16px;
     text-align: center;
   }
 }
