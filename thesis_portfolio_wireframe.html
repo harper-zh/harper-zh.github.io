@@ -1,0 +1,323 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .page { width: 100%; background: transparent; }
+
+  /* Section labels */
+  .section-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* Wireframe block base */
+  .wf-block {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    padding: 8px;
+  }
+  .wf-label {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+  }
+  .wf-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 3px;
+  }
+  .wf-sub {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+  }
+
+  /* Section wrapper */
+  .section-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  /* Color accents for section identity */
+  .accent-hero   { border-left: 3px solid #7F77DD; }
+  .accent-why    { border-left: 3px solid #1D9E75; }
+  .accent-how    { border-left: 3px solid #378ADD; }
+  .accent-result { border-left: 3px solid #BA7517; }
+  .accent-app    { border-left: 3px solid #D4537E; }
+  .accent-cta    { border-left: 3px solid #888780; }
+
+  .section-marker {
+    width: 3px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .m-purple { background: #7F77DD; }
+  .m-teal   { background: #1D9E75; }
+  .m-blue   { background: #378ADD; }
+  .m-amber  { background: #BA7517; }
+  .m-pink   { background: #D4537E; }
+  .m-gray   { background: #888780; }
+
+  .section-body { flex: 1; }
+  .section-outer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    align-items: stretch;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+  }
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* Annotation bubble */
+  .note {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    background: var(--color-background-secondary);
+    border: 0.5px dashed var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 4px 8px;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    margin: 10px 0;
+  }
+</style>
+
+<div class="page" style="padding: 1rem 0 2rem;">
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div> Hero / intro</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Problem framing</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div> Method / pipeline</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#BA7517"></div> Results</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#D4537E"></div> Application</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#888780"></div> About / contact</div>
+  </div>
+
+  <!-- ① HERO -->
+  <div class="section-outer">
+    <div class="section-marker m-purple"></div>
+    <div class="section-body">
+      <div class="section-tag">① Hero</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:90px; flex-direction:column; gap:4px;">
+          <div class="wf-title">Headline</div>
+          <div class="wf-sub">"Designing Light Through Printed Matter"</div>
+        </div>
+        <div class="wf-block" style="height:90px;">
+          <div>
+            <div class="wf-title">Hero visual</div>
+            <div class="wf-sub">HDR luminance image mosaic<br>(false-color, high contrast)</div>
+          </div>
+        </div>
+      </div>
+      <div class="wf-block" style="height:28px; font-size:11px;">Subtitle: ML-driven optical behavior prediction for 3D-printed translucent facades · Master Thesis · Southeast University 2026</div>
+      <div class="note">叙事策略：开门见山用视觉震撼——把最好看的HDR假彩色图放满右半屏，左边是精炼的一句话研究主张。</div>
+    </div>
+  </div>
+
+  <!-- ② CONTEXT & MOTIVATION -->
+  <div class="section-outer">
+    <div class="section-marker m-teal"></div>
+    <div class="section-body">
+      <div class="section-tag">② The problem — why this matters</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:64px; flex-direction:column; gap:2px;">
+          <div class="wf-title">Glare problem</div>
+          <div class="wf-sub">West-facing facades<br>→ discomfort glare</div>
+        </div>
+        <div class="wf-block" style="height:64px; flex-direction:column; gap:2px;">
+          <div class="wf-title">Material gap</div>
+          <div class="wf-sub">3D print params ≠<br>optical behavior</div>
+        </div>
+        <div class="wf-block" style="height:64px; flex-direction:column; gap:2px;">
+          <div class="wf-title">Design gap</div>
+          <div class="wf-sub">No tool to predict<br>luminance from print</div>
+        </div>
+      </div>
+      <div class="note">用三个小卡片并排，快速建立"问题存在 → 需要新方法"的逻辑链。每卡可用一张照片+一句话。</div>
+    </div>
+  </div>
+
+  <!-- ③ RESEARCH CHAIN -->
+  <div class="section-outer">
+    <div class="section-marker m-blue"></div>
+    <div class="section-body">
+      <div class="section-tag">③ Research chain — the conceptual spine</div>
+      <div class="wf-block" style="height:52px; margin-bottom:4px;">
+        <div style="font-size:12px; color:var(--color-text-primary);">
+          Fabrication params → Optical behavior → Spatial luminance → Daylighting quality
+          &nbsp;→&nbsp; <span style="color:#378ADD; font-weight:500;">Multi-objective design</span>
+        </div>
+      </div>
+      <div class="note">一条横向流程图，把论文的核心研究链可视化。这是整个页面的叙事主干，后续所有章节都在这条链上展开。</div>
+    </div>
+  </div>
+
+  <!-- ④ EXPERIMENTAL SYSTEM -->
+  <div class="section-outer">
+    <div class="section-marker m-blue"></div>
+    <div class="section-body">
+      <div class="section-tag">④ Experimental system — how data was collected</div>
+      <div style="display:grid; grid-template-columns: 2fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:80px; flex-direction:column; gap:3px;">
+          <div class="wf-title">Robotic HDR capture setup</div>
+          <div class="wf-sub">KUKA arm · luminance camera · rotating lightfield rig<br>Photo: physical lab setup</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+          <div class="wf-block" style="height:80px; flex-direction:column; gap:2px;">
+            <div class="wf-title">19 samples</div>
+            <div class="wf-sub">FGF printing params</div>
+          </div>
+          <div class="wf-block" style="height:80px; flex-direction:column; gap:2px;">
+            <div class="wf-title">Angle grid</div>
+            <div class="wf-sub">Azimuth × altitude</div>
+          </div>
+        </div>
+      </div>
+      <div class="note">实验装置照片是天然的视觉亮点，展示研究的物理真实性，建立可信度。</div>
+    </div>
+  </div>
+
+  <!-- ⑤ ML PIPELINE -->
+  <div class="section-outer">
+    <div class="section-marker m-blue"></div>
+    <div class="section-body">
+      <div class="section-tag">⑤ ML pipeline — three-stage model</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:72px; flex-direction:column; gap:3px; border-top: 2px solid #378ADD;">
+          <div class="wf-title">GPR</div>
+          <div class="wf-sub">Cross-parameter<br>generalization</div>
+        </div>
+        <div class="wf-block" style="height:72px; flex-direction:column; gap:3px; border-top: 2px solid #1D9E75;">
+          <div class="wf-title">MLP</div>
+          <div class="wf-sub">Angle interpolation<br>within sample</div>
+        </div>
+        <div class="wf-block" style="height:72px; flex-direction:column; gap:3px; border-top: 2px solid #BA7517;">
+          <div class="wf-title">CAE / VAE</div>
+          <div class="wf-sub">Latent-space<br>image encoding</div>
+        </div>
+      </div>
+      <div class="wf-block" style="height:32px; font-size:11px; margin-bottom:4px;">
+        Sensitivity analysis · Clustering (3 optical types) · LOO cross-validation
+      </div>
+      <div class="note">三模型并排，用顶部色条区分角色。下方一行展示评估框架，不深入细节——感兴趣的读者可以点击进论文。</div>
+    </div>
+  </div>
+
+  <!-- ⑥ KEY RESULTS -->
+  <div class="section-outer">
+    <div class="section-marker m-amber"></div>
+    <div class="section-body">
+      <div class="section-tag">⑥ Key results — what the model learned</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:80px; flex-direction:column; gap:4px;">
+          <div class="wf-title">Optical type clusters</div>
+          <div class="wf-sub">3 behavioral types visualized<br>Scatter plot / HDR thumbnails</div>
+        </div>
+        <div class="wf-block" style="height:80px; flex-direction:column; gap:4px;">
+          <div class="wf-title">Prediction accuracy</div>
+          <div class="wf-sub">SSIM 0.116 → 0.319<br>GPR vs MLP comparison chart</div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:44px; flex-direction:column; gap:2px; background: var(--color-background-info);">
+          <div style="font-size:18px; font-weight:500; color: var(--color-text-info);">0.319</div>
+          <div class="wf-sub">Best SSIM</div>
+        </div>
+        <div class="wf-block" style="height:44px; flex-direction:column; gap:2px;">
+          <div style="font-size:18px; font-weight:500; color:var(--color-text-primary);">19</div>
+          <div class="wf-sub">Samples</div>
+        </div>
+        <div class="wf-block" style="height:44px; flex-direction:column; gap:2px;">
+          <div style="font-size:18px; font-weight:500; color:var(--color-text-primary);">3</div>
+          <div class="wf-sub">Optical types</div>
+        </div>
+      </div>
+      <div class="note">数据指标要精选——只放最能说明贡献的2-3个数字。视觉上用HDR图做背景最有冲击力。</div>
+    </div>
+  </div>
+
+  <!-- ⑦ APPLICATION -->
+  <div class="section-outer">
+    <div class="section-marker m-pink"></div>
+    <div class="section-body">
+      <div class="section-tag">⑦ Application — Nanjing facade glare control</div>
+      <div style="display:grid; grid-template-columns:3fr 2fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:90px; flex-direction:column; gap:4px;">
+          <div class="wf-title">West-facing facade scenario</div>
+          <div class="wf-sub">Solar angle statistics (summer solstice)<br>Multi-objective optimization result<br>Facade panel map: which sample where</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div class="wf-block" style="height:40px; font-size:11px;">Before: glare risk map</div>
+          <div class="wf-block" style="height:40px; font-size:11px;">After: optimized luminance</div>
+        </div>
+      </div>
+      <div class="note">这是"研究有什么用"的回答。用一张真实建筑场景 + before/after对比，把技术结论翻译成空间语言。对建筑师读者最有说服力。</div>
+    </div>
+  </div>
+
+  <!-- ⑧ ABOUT + LINKS -->
+  <div class="section-outer">
+    <div class="section-marker m-gray"></div>
+    <div class="section-body">
+      <div class="section-tag">⑧ About + links</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-bottom:4px;">
+        <div class="wf-block" style="height:56px; flex-direction:column; gap:3px;">
+          <div class="wf-title">Harper Yuan Zhang</div>
+          <div class="wf-sub">MArch · Southeast Univ.<br>Lab of Arch. Algorithms</div>
+        </div>
+        <div class="wf-block" style="height:56px; flex-direction:column; gap:3px;">
+          <div class="wf-title">Links</div>
+          <div class="wf-sub">Paper (eCAADe 2025)<br>GitHub · Personal site</div>
+        </div>
+        <div class="wf-block" style="height:56px; flex-direction:column; gap:3px;">
+          <div class="wf-title">Contact</div>
+          <div class="wf-sub">Email · LinkedIn<br>Open for opportunities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll indicator -->
+  <div style="text-align:center; font-size:10px; color:var(--color-text-secondary); margin-top:6px;">
+    ↑ 线框图 · 点击各区块可与 Claude 继续讨论具体设计
+  </div>
+
+</div>

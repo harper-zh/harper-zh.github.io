@@ -2,15 +2,24 @@
 <html lang="">
   <head>
     <meta charset="UTF-8">
-    
+    <script>
+      // GitHub Pages SPA redirect restore
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect && redirect !== '/') {
+          sessionStorage.removeItem('redirect');
+          window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon" /> -->
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
 
 
     <title>Yuan Zhang</title>
-    <script type="module" crossorigin src="/assets/index-BWgUXzko.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-LjeC3FcE.css">
+    <script type="module" crossorigin src="/assets/index-ayTedBoV.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DLibHrTa.css">
   </head>
   <body>
     <div id="app"></div>

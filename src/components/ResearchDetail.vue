@@ -34,7 +34,8 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
       @click="go(-1)"
       aria-label="Previous"
     >
-      ‹
+      <span class="nav-arrow-icon">‹</span>
+      <span class="nav-arrow-label">Previous Research</span>
     </button>
 
     <!-- 内容区 -->
@@ -53,7 +54,8 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
       @click="go(1)"
       aria-label="Next"
     >
-      ›
+      <span class="nav-arrow-icon">›</span>
+      <span class="nav-arrow-label">Next Research</span>
     </button>
   </div>
 </template>
@@ -101,22 +103,43 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
   position: sticky;
   top: 50vh;
   background: none;
-  border: 1px solid #ddd;
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.8rem;
-  line-height: 1;
+  border: none;
+  min-width: 4.5rem;
+  padding: 0;
   cursor: pointer;
   color: #555;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.2s, color 0.2s;
+  gap: 0.2rem;
+  transition: color 0.2s;
 }
 
 .nav-arrow:hover {
-  border-color: #000;
   color: #000;
+}
+
+.nav-arrow-icon {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.nav-arrow-label {
+  font-size: 0.68rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.nav-arrow:hover .nav-arrow-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .invisible {
