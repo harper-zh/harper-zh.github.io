@@ -6,7 +6,7 @@ import Research1 from './Research1.vue'
 import Research2 from './Research2.vue'
 import Research3 from './Research3.vue'
 
-const components = [Research1, Research0, Research2, Research3]
+const components = [Research1, Research0, Research2]
 const titles = [
   'Light Redistribution in 3D-Printed Thermoplastic Facades',
   'Timber-Earth Slab: Robotic Assembly & Computational Tools',
@@ -62,15 +62,17 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
 
 <style scoped>
 .detail-layout {
+  position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0;
   width: 100%;
 }
 
 .detail-content {
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
 .detail-header {
@@ -99,12 +101,13 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
 }
 
 .nav-arrow {
-  flex-shrink: 0;
-  position: sticky;
-  top: 50vh;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
-  min-width: 4.5rem;
+  width: 2rem;
+  min-width: 2rem;
   padding: 0;
   cursor: pointer;
   color: #555;
@@ -114,6 +117,15 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
   justify-content: center;
   gap: 0.2rem;
   transition: color 0.2s;
+  z-index: 20;
+}
+
+.nav-arrow.left {
+  left: 1rem;
+}
+
+.nav-arrow.right {
+  right: 1rem;
 }
 
 .nav-arrow:hover {
@@ -145,5 +157,48 @@ const go = (delta) => router.push(`/research/${id.value + delta}`)
 .invisible {
   visibility: hidden;
   pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .nav-arrow {
+    width: 1.8rem;
+    min-width: 1.8rem;
+  }
+
+  .nav-arrow-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .detail-header {
+    margin-bottom: 1.2rem;
+  }
+
+  .nav-arrow {
+    width: 1.6rem;
+    min-width: 1.6rem;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    background: color-mix(in srgb, var(--color-background) 88%, transparent);
+    border-radius: 999px;
+  }
+
+  .nav-arrow.left {
+    left: 0.45rem;
+  }
+
+  .nav-arrow.right {
+    right: 0.45rem;
+  }
+
+  .nav-arrow-icon {
+    font-size: 1.28rem;
+  }
+
+  .nav-arrow-label {
+    display: none;
+  }
 }
 </style>

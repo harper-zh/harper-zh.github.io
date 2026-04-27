@@ -38,7 +38,7 @@ const predictionGalleryImages = [
   { src: publicUrl('images/r1_C2_scatter_test.png'), alt: 'Optical behavior prediction scatter test' },
   { src: publicUrl('images/r1_E1_heatmap_mean_lum.png'), alt: 'Prediction heatmap mean luminance' },
   { src: publicUrl('images/r1_E1_heatmap_anisotropy.png'), alt: 'Prediction heatmap anisotropy' },
-  { src: publicUrl('dist/images/re17.png'), alt: 'Prediction result overview' },
+  { src: publicUrl('images/re17.png'), alt: 'Prediction result overview' },
 ]
 
 const sensitivityImageIndex = ref(0)
@@ -83,6 +83,23 @@ const showPrevApp = () => {
 const showNextApp = () => {
   appImageIndex.value = (appImageIndex.value + 1) % appGalleryImages.length
 }
+
+const swipeStart = ref({ x: 0, y: 0 })
+const SWIPE_THRESHOLD = 40
+const onSwipeStart = (event) => {
+  const touch = event.changedTouches?.[0]
+  if (!touch) return
+  swipeStart.value = { x: touch.clientX, y: touch.clientY }
+}
+const onSwipeEnd = (event, onSwipeLeft, onSwipeRight) => {
+  const touch = event.changedTouches?.[0]
+  if (!touch) return
+  const deltaX = touch.clientX - swipeStart.value.x
+  const deltaY = touch.clientY - swipeStart.value.y
+  if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY)) return
+  if (deltaX < 0) onSwipeLeft()
+  else onSwipeRight()
+}
 </script>
 
 <template>
@@ -126,17 +143,17 @@ const showNextApp = () => {
           <div class="block block-short">
             <p class="wf-title">Daylight Modulation Interface</p>
             <p class="wf-sub">Facades mediate indoor daylight quality</p>
-            <div class="img-slot" aria-label="Image placeholder" />
+
           </div>
           <div class="block block-short">
             <p class="wf-title">Material Optical Behavior</p>
             <p class="wf-sub">3D-printed thermoplastic facade (3DPTF)'s angular dependent optical behavior</p>
-            <div class="img-slot" aria-label="Image placeholder" />
+
           </div>
           <div class="block block-short">
             <p class="wf-title">Design Decision Support</p>
             <p class="wf-sub">Geometry–light mapping guides facade design choices</p>
-            <div class="img-slot" aria-label="Image placeholder" />
+
           </div>
         </div>
       </div>
@@ -171,7 +188,7 @@ const showNextApp = () => {
                 <div class="exp-photo-item">
                   <img
                     class="exp-photo"
-                    :src="publicUrl('dist/images/re12.png')"
+                    :src="publicUrl('images/re12.png')"
                     alt="Printed sample parameter study"
                   />
                   <div class="step">
@@ -185,7 +202,7 @@ const showNextApp = () => {
                 <div class="exp-photo-item">
                   <img
                     class="exp-photo"
-                    :src="publicUrl('dist/images/DSC02175.JPG')"
+                    :src="publicUrl('images/DSC02175.JPG')"
                     alt="FGF 3D printing setup"
                   />
                   <div class="step">
@@ -213,7 +230,7 @@ const showNextApp = () => {
                 <div class="exp-photo-item">
                   <img
                     class="exp-photo"
-                    :src="publicUrl('dist/images/re13.png')"
+                    :src="publicUrl('images/re13.png')"
                     alt="KUKA arm and rotating light source setup"
                   />
                   <div class="steps">
@@ -236,7 +253,7 @@ const showNextApp = () => {
                 <div class="exp-photo-item">
                   <img
                     class="exp-photo"
-                    :src="publicUrl('dist/images/re14.png')"
+                    :src="publicUrl('images/re14.png')"
                     alt="Luminance experiment setup detail"
                   />
                   <div class="step">
@@ -276,7 +293,11 @@ const showNextApp = () => {
                 <p class="wf-sub">Mean, standard deviation, kurtosis measure transmission level, uniformity, and concentration of bright regions.</p>
               </div>
             </div>
-            <div class="feature-gallery">
+            <div
+              class="feature-gallery"
+              @touchstart="onSwipeStart"
+              @touchend="onSwipeEnd($event, showNextFeature, showPrevFeature)"
+            >
               <button class="feature-nav-btn" type="button" @click="showPrevFeature" aria-label="Previous feature image">
                 ‹
               </button>
@@ -336,7 +357,11 @@ const showNextApp = () => {
             <p class="wf-title">Sensitivity analysis</p>
 
             <p class="wf-sub">3 behavioral types visualized · Scatter plot / HDR thumbnails</p>
-            <div class="result-gallery">
+            <div
+              class="result-gallery"
+              @touchstart="onSwipeStart"
+              @touchend="onSwipeEnd($event, showNextSensitivity, showPrevSensitivity)"
+            >
               <button class="feature-nav-btn" type="button" @click="showPrevSensitivity" aria-label="Previous sensitivity figure">
                 ‹
               </button>
@@ -360,7 +385,11 @@ const showNextApp = () => {
           </div>
           <div class="block block-result">
             <p class="wf-title">Optical behavior prediction</p>
-            <div class="result-gallery">
+            <div
+              class="result-gallery"
+              @touchstart="onSwipeStart"
+              @touchend="onSwipeEnd($event, showNextPrediction, showPrevPrediction)"
+            >
               <button class="feature-nav-btn" type="button" @click="showPrevPrediction" aria-label="Previous prediction figure">
                 ‹
               </button>
@@ -415,7 +444,11 @@ const showNextApp = () => {
             </div>
           </div>
           <div class="block stack-app app-gallery-panel">
-            <div class="result-gallery app-result-gallery">
+            <div
+              class="result-gallery app-result-gallery"
+              @touchstart="onSwipeStart"
+              @touchend="onSwipeEnd($event, showNextApp, showPrevApp)"
+            >
               <button class="feature-nav-btn" type="button" @click="showPrevApp" aria-label="Previous application figure">
                 ‹
               </button>
@@ -469,7 +502,7 @@ const showNextApp = () => {
 .thesis-page {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
   padding-bottom: 1rem;
 }
 
@@ -1096,7 +1129,31 @@ const showNextApp = () => {
   min-height: 3.5rem;
 }
 
+@media (max-width: 1024px) {
+  .thesis-page {
+    gap: 1.5rem;
+  }
+
+  .hero-main-title {
+    font-size: 1.55rem;
+  }
+
+  .wf-title {
+    font-size: 1.15rem;
+  }
+
+  .result-gallery-img,
+  .app-gallery-img,
+  .feature-img {
+    height: clamp(220px, 42vw, 420px);
+  }
+}
+
 @media (max-width: 720px) {
+  .thesis-page {
+    gap: 1.25rem;
+  }
+
   .grid-hero,
   .grid-problem,
   .grid-lab,
@@ -1112,6 +1169,54 @@ const showNextApp = () => {
     grid-template-columns: 1fr;
   }
 
+  .block {
+    padding: 0.52rem 0.62rem;
+  }
+
+  .hero-main-title {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .wf-title {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .wf-sub,
+  .step-desc,
+  .app-flow-desc {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+
+  .section-tag {
+    font-size: 0.56rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .feature-nav-btn {
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1rem;
+  }
+
+  .result-gallery,
+  .feature-gallery,
+  .app-result-gallery {
+    gap: 0.25rem;
+  }
+
+  .feature-img,
+  .result-gallery-img,
+  .app-gallery-img {
+    height: clamp(190px, 56vw, 320px);
+  }
+
+  .exp-photo-row {
+    gap: 14px;
+  }
+
   .exp-photo {
     width: 100%;
   }
@@ -1122,6 +1227,39 @@ const showNextApp = () => {
 
   .block-lab-tile {
     min-height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thesis-page {
+    gap: 1rem;
+  }
+
+  .hero-main-title {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .wf-title {
+    font-size: 0.94rem;
+    line-height: 1.35;
+  }
+
+  .wf-sub,
+  .step-desc,
+  .app-flow-desc {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .section-tag {
+    font-size: 0.52rem;
+  }
+
+  .feature-img,
+  .result-gallery-img,
+  .app-gallery-img {
+    height: clamp(170px, 62vw, 280px);
   }
 }
 </style>

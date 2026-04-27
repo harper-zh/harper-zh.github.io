@@ -22,12 +22,7 @@ const contents = [
     description: 'Path planning and on-site robotic fabrication of 15 large-scale concrete furniture pieces.',
     src: '/images/re2.png',
   },
-  {
-    theme: 'Computational Design',
-    title: 'Baimaofang: Concrete Digital Fabrication',
-    description: 'Geometry rationalization of freeform surfaces for robotic hot-wire cutting and concrete casting.',
-    src: '/images/re3.png',
-  },
+
 ]
 
 const themeColors = {
